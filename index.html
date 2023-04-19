@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/medias.css">
 </head>
-<body>
+<body onresize="tamanho()">
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clicar()">menu</span>
@@ -49,6 +49,14 @@
 
             } else {
                 m.style.display = 'block'
+            }
+        }
+
+        function tamanho() {
+            if (window.innerWidth >= 600) {
+                m.style.display = 'block'
+            } else {
+                m.style.display = 'none'
             }
         }
 
